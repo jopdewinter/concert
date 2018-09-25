@@ -11,8 +11,8 @@
 |
 */
 
-$router->get('/', [
-    'uses' => 'bandController@index'
-]);
-
-$router->put('band/{id}', 'bandController@update');
+$router->get('/', 'bandController@index');
+$router->get('getAll', 'bandController@getAll');
+$router->post('create', ['uses' => 'bandController@create']);
+$router->put('update/{id}', 'bandController@update');
+$router->delete('delete/{id}', 'bandController@delete');
