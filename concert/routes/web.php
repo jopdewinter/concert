@@ -12,5 +12,7 @@
 */
 
 $router->get('/', [
-    'uses' => 'homeController@index'
+    'uses' => 'bandController@index'
 ]);
+
+$router->put('band/{id}', 'bandController@update');
